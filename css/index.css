@@ -42,25 +42,25 @@
 }
 
 @media screen and (max-width: 427px) {
-  .navigation:hover {
+  .navigation:hover, .navigation:focus-within {
     left: calc(100% - 48px - 16em);
   }
 }
 
 @media screen and (min-width: 428px) and (max-width: 640px) {
-  .navigation:hover {
+  .navigation:hover, .navigation:focus-within {
     left: calc(100% - 48px - 21em);
   }
 }
 
 @media screen and (min-width: 641px) and (max-width: 1200px) {
-  .navigation:hover {
+  .navigation:hover, .navigation:focus-within {
     left: calc(100% - 48px - 24em);
   }
 }
 
 @media screen and (min-width: 1201px) {
-  .navigation:hover {
+  .navigation:hover, .navigation:focus-within {
     left: calc(100% - 48px - 26em);
   }
 }
@@ -133,8 +133,9 @@
   padding: .15em .5em;
 }
 
-.menu-item .section-link:hover {
+.menu-item .section-link:hover, .menu-item .section-link:focus {
   background-color: #f9521a;
+  outline: none;
 }
 
 .menu-item .section-link:active {

@@ -24,7 +24,7 @@
     align-items: flex-start;
     box-sizing: border-box;
 
-    &:hover {
+    &:hover, &:focus-within {
         @media screen and (max-width: 427px) {
             left: calc(100% - 48px - 16em);
         }
@@ -95,8 +95,9 @@
             border-radius: 1em;
             padding: .15em .5em;
 
-            &:hover {
+            &:hover, &:focus {
                 background-color: $light-feature-color;
+                outline: none;
             }
 
             &:active {
