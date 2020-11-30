@@ -9,18 +9,18 @@
 }
 
 .welcome {
-  width: 80%;
+  width: 80vw;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.85);
   color: #dddad9;
 }
 
-.welcome h1 {
+.welcome-title {
   font-size: 3rem;
   padding: 4em 0 .1em;
 }
 
-.welcome p {
+.welcome-description {
   font-size: 1.7rem;
   padding: .1em 0 4em;
 }
@@ -41,7 +41,13 @@
           box-sizing: border-box;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 427px) {
+  .navigation:hover {
+    left: calc(100% - 48px - 16em);
+  }
+}
+
+@media screen and (min-width: 428px) and (max-width: 640px) {
   .navigation:hover {
     left: calc(100% - 48px - 21em);
   }
@@ -81,7 +87,13 @@
   list-style-type: none;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 427px) {
+  .menu {
+    width: 15em;
+  }
+}
+
+@media screen and (min-width: 428px) and (max-width: 640px) {
   .menu {
     width: 20em;
   }
@@ -99,19 +111,19 @@
   }
 }
 
-.menu li {
+.menu-item {
   padding: .15em 1em;
 }
 
-.menu li:first-child {
+.menu-item:first-child {
   padding-top: .3em;
 }
 
-.menu li:last-child {
+.menu-item:last-child {
   padding-bottom: .3em;
 }
 
-.menu li a {
+.menu-item .section-link {
   display: block;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.85);
@@ -121,11 +133,11 @@
   padding: .15em .5em;
 }
 
-.menu li a:hover {
+.menu-item .section-link:hover {
   background-color: #f9521a;
 }
 
-.menu li a:active {
+.menu-item .section-link:active {
   background-color: #c34109;
 }
 /*# sourceMappingURL=index.css.map */
