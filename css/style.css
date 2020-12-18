@@ -1,7 +1,10 @@
 :root {
-    --main-background-color: hsla(263, 64%, 12%, 0.84);
-    --main-font-color: hsla(0, 0%, 70%, 1);
-    --additional-background-color: hsla(263, 64%, 12%, 0.84);
+    --main-background-color: hsla(263, 80%, 7%, 0.84);
+    --light-font-color: hsla(0, 0%, 70%, 1);
+    --light-background-color: hsl(263, 33%, 82%);
+    --dimlight-background-color: hsl(251, 100%, 76%);
+    --dark-background-color: hsl(263, 90%, 5%);
+    --dark-font-color: hsl(0, 15%, 4%);
     font-size: 18px;
 }
 
@@ -33,25 +36,54 @@
         left: 100%;
     }
 
-    .navigation:hover{
+    .navigation:hover {
         left: calc(100% - 21em - 48px);
     }
 }
 
-body {
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
+}
+
+body {
+    width: 80%;
+    margin: auto;
     background-color: var(--main-background-color);
+    color: var(--light-font-color);
 }
 
 .content {
+    width: 80%;
+    margin: auto;
     overflow: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--main-background-color);
+}
+
+.welcome {
+    background-image: url();
+    transition: transform .6s ease-in-out;
+}
+
+.welcome p:hover, .welcome h1:hover {
+    transform: scale(1.1);
+}
+
+.welcome h1 {
+    width: 100%;
+    margin: 3em auto 0;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.welcome p {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5em;
 }
 
 .navigation {
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;
@@ -61,19 +93,72 @@ body {
     transition: left 1s ease-in-out;
 }
 
-.menu, .menu ul {
-    flex-direction: column;
-    list-style-type: none;
-    text-decoration: none;
-    display: block;
-    color: var(--main-font-color);
-    background-color: var(--additional-background-color);
-}
-
 .navigation a {
+    display: block;
     font-size: 0.9rem;
     color: var(--main-font-color);
     text-decoration: none;
+    padding: .1em .7em;
+    transition: background-color .6s ease-in-out;
+    border-radius: .5em;
+}
+
+.navigation a:hover {
+    background-color: var(--dimlight-background-color);
+}
+
+.menu{
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 1em;
+    padding: .5em;
+    background-color: var(--light-background-color);
+    color: var(--dark-font-color);
+    list-style: none;
+    border-radius: 1em;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0 0 0 1.5em;
+}
+
+.menu-icon {
+    display: inline-flex;
+    margin-top: 1em;
+    margin-right: .9em;
+    transform: scale(.78);
+    filter: invert(.77);
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--light-background-color);
+}
+
+.projects > li {
+    display: inline-flex;
+    padding: 0.2em 2em;
+    border-right: 1px dotted var(--dark-font-color);
+    transition: background-color .6s ease-in-out;
+}
+
+.projects > li:first-child {
+    border-left: 1px dotted var(--dark-font-color);
+}
+
+.projects a {
+    text-decoration: none;
+    color: var(--dark-font-color);
+}
+
+.projects li:hover {
+    background-color: var(--dimlight-background-color);
 }
 
 .disclaimer {
@@ -84,18 +169,4 @@ body {
     font-size: .7rem;
     line-height: 1.5rem;
     color: var(--main-font-color);
-}
-
-.menu{
-    display: inline-flex;
-    margin-top: 1em;
-    padding: 10px;
-}
-
-.menu-icon {
-    display: inline-flex;
-    margin-top: 1em;
-    margin-right: .9em;
-    transform: scale(.78);
-    filter: invert(.77);
 }
