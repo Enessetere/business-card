@@ -2,16 +2,22 @@
     width: 80vw;
     text-align: center;
     background-color: $dark-color;
-    color: $light-color;
+    background-position: center;
+    color: $welcome-color;
+    animation: code-animation 12s infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
     
     &-title {
         font-size: 3rem;
         padding: 4em 0 .1em;
+        opacity: 1;
     }
 
     &-description {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         padding: .1em 0 4em;
+        opacity: 1;
     }
 }
 
@@ -48,6 +54,8 @@
     align-self: baseline;
     margin-right: .5em;
     filter: invert(1);
+    background-color: $light-color;
+    border-radius: 50%;
 }
 
 .menu {
@@ -57,6 +65,7 @@
     padding: .5em;
     background-color: $light-color;
     border-radius: 1em;
+    border: 1px solid $dark-feature-color;
     list-style-type: none;
 
 
@@ -78,6 +87,7 @@
 
     &-item {
          padding: .15em 1em;
+         list-style: none;
 
          &:first-child {
              padding-top: .3em;
@@ -104,5 +114,27 @@
                 background-color: $dark-feature-color;
             }
         }
+    }
+}
+
+@keyframes code-animation {
+    0%, 25% {
+        background-image: url('../img/html-code2.png');
+        filter: grayscale(.7);
+    }
+
+    33%, 57% {
+        background-image: url('../img/java-code2.png');
+        filter: grayscale(.7);
+    }
+
+    66%, 91% {
+        background-image: url('../img/ts-code2.png');
+        filter: grayscale(.7);
+    }
+
+    100% {
+        background-image: url('../img/html-code2.png');
+        filter: grayscale(.7);
     }
 }

@@ -1,0 +1,81 @@
+.article {
+    width: 80vw;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: $light-color;
+    color: $dark-color;
+
+    &-title {
+        font-size: 2.2em;
+        text-align: center;
+        padding: 2rem .5rem;
+    }
+
+    &-content {
+        text-align: justify;
+        padding: 1rem 3rem;
+    }
+
+    &-ending {
+        font-size: 1.3em;
+        padding: 1em;
+        text-align: center;
+    }
+
+    &-subtitle {
+        padding-bottom: .1em;
+    }
+}
+
+.section {
+    width: 80vw;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: $dark-color;
+    color: $light-color;
+
+    &-title {
+        font-size: 1.8em;
+        text-align: center;
+        padding: 2rem .5rem;
+    }
+
+    &-content {
+        text-align: justify;
+        padding: 1rem 3rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid $dark-feature-color;
+    background-color: $light-feature-color;
+    padding: .5rem .8rem;
+    margin: 1rem 2rem;
+    transition: all .7s ease-in-out;
+    border-radius: 1em;
+    text-decoration: none;
+    color: $light-color;
+    
+    &:hover {
+        background-color: $dark-feature-color;
+        border-radius: .5em;
+    }
+}
+
+.links {
+    text-align: center;
+}
+
+hr {
+    width: 80vw;
+}
+
+.projects {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    align-items: center;
+    justify-items: center;
+
+}

@@ -5,24 +5,31 @@
 }
 
 .content {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .welcome {
   width: 80vw;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #dddad9;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-position: center;
+  color: white;
+  -webkit-animation: code-animation 12s infinite;
+          animation: code-animation 12s infinite;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .welcome-title {
   font-size: 3rem;
   padding: 4em 0 .1em;
+  opacity: 1;
 }
 
 .welcome-description {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   padding: .1em 0 4em;
+  opacity: 1;
 }
 
 .navigation {
@@ -74,6 +81,8 @@
   margin-right: .5em;
   -webkit-filter: invert(1);
           filter: invert(1);
+  background-color: #dddad9;
+  border-radius: 50%;
 }
 
 .menu {
@@ -84,6 +93,7 @@
   padding: .5em;
   background-color: #dddad9;
   border-radius: 1em;
+  border: 1px solid #c34109;
   list-style-type: none;
 }
 
@@ -113,6 +123,7 @@
 
 .menu-item {
   padding: .15em 1em;
+  list-style: none;
 }
 
 .menu-item:first-child {
@@ -126,7 +137,7 @@
 .menu-item .section-link {
   display: block;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(0, 0, 0, 0.9);
   -webkit-transition: background-color .7s ease-in-out;
   transition: background-color .7s ease-in-out;
   border-radius: 1em;
@@ -142,11 +153,145 @@
   background-color: #c34109;
 }
 
+@-webkit-keyframes code-animation {
+  0%, 25% {
+    background-image: url("../img/html-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+  33%, 57% {
+    background-image: url("../img/java-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+  66%, 91% {
+    background-image: url("../img/ts-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+  100% {
+    background-image: url("../img/html-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+}
+
+@keyframes code-animation {
+  0%, 25% {
+    background-image: url("../img/html-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+  33%, 57% {
+    background-image: url("../img/java-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+  66%, 91% {
+    background-image: url("../img/ts-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+  100% {
+    background-image: url("../img/html-code2.png");
+    -webkit-filter: grayscale(0.7);
+            filter: grayscale(0.7);
+  }
+}
+
+.article {
+  width: 80vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
+  background-color: #dddad9;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.article-title {
+  font-size: 2.2em;
+  text-align: center;
+  padding: 2rem .5rem;
+}
+
+.article-content {
+  text-align: justify;
+  padding: 1rem 3rem;
+}
+
+.article-ending {
+  font-size: 1.3em;
+  padding: 1em;
+  text-align: center;
+}
+
+.article-subtitle {
+  padding-bottom: .1em;
+}
+
+.section {
+  width: 80vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #dddad9;
+}
+
+.section-title {
+  font-size: 1.8em;
+  text-align: center;
+  padding: 2rem .5rem;
+}
+
+.section-content {
+  text-align: justify;
+  padding: 1rem 3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #c34109;
+  background-color: #f9521a;
+  padding: .5rem .8rem;
+  margin: 1rem 2rem;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
+  border-radius: 1em;
+  text-decoration: none;
+  color: #dddad9;
+}
+
+.btn:hover {
+  background-color: #c34109;
+  border-radius: .5em;
+}
+
+.links {
+  text-align: center;
+}
+
+hr {
+  width: 80vw;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
 .disclaimer {
-  width: 80%;
+  width: 80vw;
   text-align: center;
   font-size: 14px;
   color: #dddad9;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 /*# sourceMappingURL=index.css.map */
