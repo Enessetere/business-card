@@ -204,7 +204,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: auto;
-  background-color: #dddad9;
+  background-color: #c3bdbb;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -229,13 +229,17 @@
   padding-bottom: .1em;
 }
 
-.section {
+.article-break {
   width: 80vw;
+}
+
+.section {
+  width: 75vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #dddad9;
+  background-color: rgba(28, 25, 23, 0.8);
+  color: #c3bdbb;
 }
 
 .section-title {
@@ -247,6 +251,10 @@
 .section-content {
   text-align: justify;
   padding: 1rem 3rem;
+}
+
+.section-break {
+  width: 75vw;
 }
 
 .btn {
@@ -269,10 +277,6 @@
 
 .links {
   text-align: center;
-}
-
-hr {
-  width: 80vw;
 }
 
 .projects {
