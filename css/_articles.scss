@@ -2,7 +2,7 @@
     width: 80vw;
     box-sizing: border-box;
     margin: auto;
-    background-color: $light-color;
+    background-color: $dark-light-color;
     color: $dark-color;
 
     &-title {
@@ -25,14 +25,18 @@
     &-subtitle {
         padding-bottom: .1em;
     }
+
+    &-break {
+        width: 80vw;
+    }
 }
 
 .section {
-    width: 80vw;
+    width: 75vw;
     box-sizing: border-box;
     margin: auto;
-    background-color: $dark-color;
-    color: $light-color;
+    background-color: $light-dark-color;
+    color: $dark-light-color;
 
     &-title {
         font-size: 1.8em;
@@ -43,6 +47,10 @@
     &-content {
         text-align: justify;
         padding: 1rem 3rem;
+    }
+
+    &-break {
+        width: 75vw;
     }
 }
 
@@ -65,10 +73,6 @@
 
 .links {
     text-align: center;
-}
-
-hr {
-    width: 80vw;
 }
 
 .projects {
