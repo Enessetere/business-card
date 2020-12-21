@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    font-size: $font-size;
+    font-family: 'Comfortaa', cursive;
+    line-height: 1.8em;
+}
+
 .welcome {
     width: 80vw;
     text-align: center;
@@ -29,6 +36,7 @@
     transition: left .7s ease-in-out;
     align-items: flex-start;
     box-sizing: border-box;
+    z-index: 1;
 
     &:hover, &:focus-within {
         @media screen and (max-width: 427px) {
