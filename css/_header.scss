@@ -127,8 +127,9 @@
 }
 
 .cclogo {
-    position: relative;
-    left: -23.7vw;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 @keyframes code-animation {

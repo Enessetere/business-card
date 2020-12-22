@@ -164,8 +164,9 @@
 }
 
 .cclogo {
-  position: relative;
-  left: -23.7vw;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @-webkit-keyframes code-animation {
@@ -426,7 +427,17 @@
   height: auto;
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 466px) {
+  .selfie {
+    margin: auto;
+    width: 70vw;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 466px) and (max-width: 1550px) {
   .selfie {
     margin: auto;
     display: block;
@@ -448,14 +459,21 @@
   width: 80vw;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 510px) {
+  .resize {
+    width: 60vw;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 510px) and (max-width: 1300px) {
   .resize {
     width: auto;
     height: 50vh;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1300px) {
   .resize {
     width: auto;
     height: 50vh;
@@ -466,20 +484,20 @@
   width: 80vw;
   text-align: center;
   font-size: 1.5rem;
-  padding-bottom: 55vh;
+  padding-bottom: 5vh;
 }
 
 .hobbie-description {
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
   .hobbie-description {
-    width: 70vw;
+    width: 60vw;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1300px) {
   .hobbie-description {
     display: inline-block;
     width: 30vw;
@@ -488,9 +506,9 @@
 }
 
 .hobbie {
-  left: 20vw;
+  left: 0;
   width: 60vw;
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,6 +520,27 @@
           justify-content: space-between;
   background-color: #1c1917;
   color: #dddad9;
+  margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 1300px) {
+  .hobbie {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hobbie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .disclaimer {
