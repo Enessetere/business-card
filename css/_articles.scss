@@ -1,5 +1,10 @@
 .article {
-    width: 80vw;
+    @media screen and (max-width: 700px) {
+        width: 100vw;
+    }
+    @media screen and (min-width: 700px) {
+        width: 80vw;
+    }
     box-sizing: border-box;
     margin: auto;
     padding-bottom: 2rem;
@@ -14,7 +19,6 @@
 
     &-content {
         font-size: 1.4rem;
-        text-align: justify;
         padding: 1rem 3rem;
     }
 
@@ -59,7 +63,6 @@
 
     &-content {
         font-size: 1.5rem;
-        text-align: justify;
         padding: 1rem 3rem;
     }
 }

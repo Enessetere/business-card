@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
     font-size: $font-size;
+    @media screen and (min-width: 700px) {
+        font-size: 1.5em;
+    }
     font-family: 'Comfortaa', cursive;
     line-height: 1.8em;
 }
