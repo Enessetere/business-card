@@ -6,21 +6,24 @@
     background-color: $dark-light-color;
     color: $dark-color;
 
+    @media screen and (max-width: 720px) {
+        width: 100vw;
+    }
+
     &-title {
         font-size: 2.2em;
         text-align: center;
-        padding: 2rem .5rem;
+        padding: 1rem 1rem;
     }
 
     &-content {
         font-size: 1.4rem;
-        text-align: justify;
-        padding: 1rem 3rem;
+        padding: 1rem 1rem;
     }
 
     &-ending {
         font-size: 1.3em;
-        padding: 1em;
+        padding: 1rem;
         text-align: center;
     }
 
@@ -30,6 +33,10 @@
 
     &-break {
         width: 80vw;
+
+        @media screen and (max-width: 720px) {
+            width: 100vw;
+        }
     }
 
     &-about {
@@ -59,12 +66,17 @@
 
     &-content {
         font-size: 1.5rem;
-        text-align: justify;
-        padding: 1rem 3rem;
+        padding: 1rem 1rem;
+    }
+
+    @media screen and (max-width: 720px) {
+        width: 95vw;
     }
 }
 
 .btn {
+    min-width: 11rem;
+    max-width: 15rem;
     display: inline-block;
     font-size: 1.2rem;
     border: 1px solid $dark-feature-color;
@@ -99,7 +111,14 @@
 .jump-top {
     position:fixed;
     right: 0;
-    bottom: 0;
+    bottom: 1rem;
+    z-index: 2;
+    opacity: .7;
+    transition: opacity .7s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .inline-link {
@@ -107,10 +126,10 @@
     text-decoration: none;
     color: $dark-feature-color;
     transition: color .7s ease-in-out;
-}
 
-.inline-link:hover {
-    color: $light-feature-color;
+    &:hover {
+        color: $light-feature-color;
+    }
 }
 
 .skills {
@@ -122,9 +141,20 @@
     justify-content: space-around;
     padding-bottom: 2rem;
 
+    @media screen and (max-width: 720px) {
+        width: 75vw;
+    }
+
     &-content {
-        filter: grayscale(.9);
-        transition: all .7s ease-in-out;
+        @media screen and (min-width: 720px) {
+            filter: grayscale(.9);
+            transition: all .7s ease-in-out;
+        }
+
+        @media screen and (max-width: 720px) {
+            filter: grayscale(.7);
+            transition: all .7s ease-in-out;
+        }
     }
 
     &-content:hover {
@@ -137,14 +167,18 @@
     &-icon {
         width: 10vw;
         height: auto;
+
+        @media screen and (max-width: 720px) {
+            width: 15vw;
+        }
     }
 }
 
 .contact {
     text-align: center;
+
     &-text {
         @extend .article-content;
-        padding: 0;
         font-weight: 500;
         text-align: center;
     }
@@ -174,12 +208,11 @@
         display: block;
         margin: auto;
 
-        @media screen and (max-width: 900px) {
-            width: 80vw;
-            height: 30vh;
+        @media screen and (max-width: 720px) {
+            width: 90vw;
         }
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 720px) {
             width: 30vw;
         }
         
@@ -205,14 +238,14 @@
         color: $light-color;
         resize: vertical;
 
-        @media screen and (max-width: 900px) {
-            width: 80vw;
-            height: 30vh;
+        @media screen and (max-width: 720px) {
+            width: 90vw;
+            min-height: 20vh;
         }
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 720px) {
             width: 30vw;
-            height: 15vw;
+            min-height: 15vh;
         }
     }
 }
@@ -245,10 +278,6 @@
     }
 }
 
-.about {
-    width: 80vw;
-}
-
 .resize {
     @media screen and (max-width: 510px) {
         width: 60vw;
@@ -271,19 +300,9 @@
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 5vh;
-}
 
-.hobbie-description {
-    font-size: 1.5rem;
-
-    @media screen and (max-width: 1300px) {
-        width: 60vw;
-    }
-    
-    @media screen and (min-width: 1300px) {
-        display: inline-block;
-        width: 30vw;
-        top: 0;
+    @media screen and (max-width: 720px) {
+        width: 100vw;
     }
 }
 
@@ -298,13 +317,38 @@
     color: $light-color;
     margin-bottom: 5vh;
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 720px) {
         display: block;
+        width: 95vw;
+    }
+
+    @media screen and (min-width: 720px) and (max-width: 1300px) {
+        display: block;
+        width: 60vw;
     }
     
     @media screen and (min-width: 1300px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    &-description {
+        font-size: 1.5rem;
+        padding: 1rem;
+    
+        @media screen and (max-width: 720px) {
+            width: 95vw;
+        }
+
+        @media screen and (min-width: 720px) and (max-width: 1300px) {
+            width: 60vw;
+        }
+        
+        @media screen and (min-width: 1300px) {
+            display: inline-block;
+            width: 30vw;
+            top: 0;
+        }
     }
 }

@@ -1,5 +1,9 @@
 .disclaimer {
     width: 80vw;
+    @media screen and (max-width: 720px) {
+        width: 100vw;
+    }
+    padding: .5rem 0;
     text-align: center;
     font-size: 14px;
     color: $light-color;
