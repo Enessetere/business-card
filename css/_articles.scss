@@ -13,6 +13,7 @@
     }
 
     &-content {
+        font-size: 1.4rem;
         text-align: justify;
         padding: 1rem 3rem;
     }
@@ -30,12 +31,23 @@
     &-break {
         width: 80vw;
     }
+
+    &-about {
+        @media screen and (max-width: 1550px) {
+            display: block;
+        }
+
+        @media screen and (min-width: 1550px) {
+            display: inline-block;
+            width: 50vw;
+        }
+    }
 }
 
 .section {
     width: 75vw;
     box-sizing: border-box;
-    margin: auto;
+    margin: 2rem auto 0;
     background-color: $light-dark-color;
     color: $dark-light-color;
 
@@ -46,17 +58,15 @@
     }
 
     &-content {
+        font-size: 1.5rem;
         text-align: justify;
         padding: 1rem 3rem;
-    }
-
-    &-break {
-        width: 75vw;
     }
 }
 
 .btn {
     display: inline-block;
+    font-size: 1.2rem;
     border: 1px solid $dark-feature-color;
     background-color: $light-feature-color;
     padding: .5rem .8rem;
@@ -64,7 +74,8 @@
     transition: all .7s ease-in-out;
     border-radius: 1em;
     text-decoration: none;
-    color: $light-color;
+    color: $welcome-color;
+    font-weight: 700;
     
     &:hover {
         background-color: $dark-feature-color;
@@ -92,6 +103,7 @@
 }
 
 .inline-link {
+    font-size: 1.5rem;
     text-decoration: none;
     color: $dark-feature-color;
     transition: color .7s ease-in-out;
@@ -130,9 +142,129 @@
 
 .contact {
     text-align: center;
+
+    &-form {
+        display: block;
+        margin: auto;
+
+        @media screen and (max-width: 900px) {
+            width: 80vw;
+            height: 30vh;
+        }
+
+        @media screen and (min-width: 900px) {
+            width: 30vw;
+            height: 15vw;
+        }
+    }
+
+    &-message {
+        margin: auto;
+        font-size: 1.5rem;
+        background-color: $dark-color;
+        color: $light-color;
+        resize: vertical;
+
+        @media screen and (max-width: 900px) {
+            width: 80vw;
+            height: 30vh;
+        }
+
+        @media screen and (min-width: 900px) {
+            width: 30vw;
+            height: 15vw;
+        }
+    }
 }
 
 .small-icon {
     width: 1rem;
     height: auto;
+}
+
+.selfie {
+    @media screen and (max-width: 466px) {
+        margin: auto;
+        width: 70vw;
+        height: auto;
+        display: block;
+        border-radius: 50%;
+    }
+
+    @media screen and (min-width: 466px) and (max-width: 1550px) {
+        margin: auto;
+        display: block;
+        border-radius: 50%;
+    }
+
+    @media screen and (min-width: 1550px) {
+        padding-left: 2rem;
+        display: inline-block;
+        border-radius: 50%;
+        transform: translateY(-15vh);
+    }
+}
+
+.about {
+    width: 80vw;
+}
+
+.resize {
+    @media screen and (max-width: 510px) {
+        width: 60vw;
+        height: auto;
+    }
+
+    @media screen and (min-width: 510px) and (max-width: 1300px) {
+        width: auto;
+        height: 50vh;
+    }
+
+    @media screen and (min-width: 1300px) {
+        width: auto;
+        height: 50vh;
+    }
+}
+
+.hobbies {
+    width: 80vw;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 5vh;
+}
+
+.hobbie-description {
+    font-size: 1.5rem;
+
+    @media screen and (max-width: 1300px) {
+        width: 60vw;
+    }
+    
+    @media screen and (min-width: 1300px) {
+        display: inline-block;
+        width: 30vw;
+        top: 0;
+    }
+}
+
+.hobbie {
+    left: 0;
+    width: 60vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $light-dark-color;
+    color: $light-color;
+    margin-bottom: 5vh;
+
+    @media screen and (max-width: 1300px) {
+        display: block;
+    }
+    
+    @media screen and (min-width: 1300px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

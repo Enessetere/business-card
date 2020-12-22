@@ -30,13 +30,14 @@
 
 .welcome-title {
   font-size: 3rem;
-  padding: 4em 0 .1em;
+  padding: 6em 0 .1em;
   opacity: 1;
 }
 
 .welcome-description {
-  font-size: 1.8rem;
-  padding: .1em 0 4em;
+  font-size: 2rem;
+  padding: .1em 0 6em;
+  font-weight: 700;
   opacity: 1;
 }
 
@@ -54,7 +55,7 @@
           align-items: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  z-index: 1;
+  z-index: 3;
 }
 
 @media screen and (max-width: 427px) {
@@ -162,6 +163,12 @@
   background-color: #c34109;
 }
 
+.cclogo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 @-webkit-keyframes code-animation {
   0%, 25% {
     background-image: url("../img/html-code2.png");
@@ -225,6 +232,7 @@
 }
 
 .article-content {
+  font-size: 1.4rem;
   text-align: justify;
   padding: 1rem 3rem;
 }
@@ -243,12 +251,25 @@
   width: 80vw;
 }
 
+@media screen and (max-width: 1550px) {
+  .article-about {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .article-about {
+    display: inline-block;
+    width: 50vw;
+  }
+}
+
 .section {
   width: 75vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: auto;
-  background-color: rgba(28, 25, 23, 0.8);
+  margin: 2rem auto 0;
+  background-color: #1c1917;
   color: #d6d2d1;
 }
 
@@ -259,16 +280,14 @@
 }
 
 .section-content {
+  font-size: 1.5rem;
   text-align: justify;
   padding: 1rem 3rem;
 }
 
-.section-break {
-  width: 75vw;
-}
-
 .btn {
   display: inline-block;
+  font-size: 1.2rem;
   border: 1px solid #c34109;
   background-color: #f9521a;
   padding: .5rem .8rem;
@@ -277,7 +296,8 @@
   transition: all .7s ease-in-out;
   border-radius: 1em;
   text-decoration: none;
-  color: #dddad9;
+  color: white;
+  font-weight: 700;
 }
 
 .btn:hover {
@@ -310,6 +330,7 @@
 }
 
 .inline-link {
+  font-size: 1.5rem;
   text-decoration: none;
   color: #c34109;
   -webkit-transition: color .7s ease-in-out;
@@ -360,9 +381,166 @@
   text-align: center;
 }
 
+.contact-form {
+  display: block;
+  margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-form {
+    width: 80vw;
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact-form {
+    width: 30vw;
+    height: 15vw;
+  }
+}
+
+.contact-message {
+  margin: auto;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #dddad9;
+  resize: vertical;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-message {
+    width: 80vw;
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact-message {
+    width: 30vw;
+    height: 15vw;
+  }
+}
+
 .small-icon {
   width: 1rem;
   height: auto;
+}
+
+@media screen and (max-width: 466px) {
+  .selfie {
+    margin: auto;
+    width: 70vw;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 466px) and (max-width: 1550px) {
+  .selfie {
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .selfie {
+    padding-left: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    -webkit-transform: translateY(-15vh);
+            transform: translateY(-15vh);
+  }
+}
+
+.about {
+  width: 80vw;
+}
+
+@media screen and (max-width: 510px) {
+  .resize {
+    width: 60vw;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 510px) and (max-width: 1300px) {
+  .resize {
+    width: auto;
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .resize {
+    width: auto;
+    height: 50vh;
+  }
+}
+
+.hobbies {
+  width: 80vw;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 5vh;
+}
+
+.hobbie-description {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .hobbie-description {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hobbie-description {
+    display: inline-block;
+    width: 30vw;
+    top: 0;
+  }
+}
+
+.hobbie {
+  left: 0;
+  width: 60vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1c1917;
+  color: #dddad9;
+  margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 1300px) {
+  .hobbie {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hobbie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .disclaimer {
