@@ -17,13 +17,14 @@
     
     &-title {
         font-size: 3rem;
-        padding: 4em 0 .1em;
+        padding: 6em 0 .1em;
         opacity: 1;
     }
 
     &-description {
-        font-size: 1.8rem;
-        padding: .1em 0 4em;
+        font-size: 2rem;
+        padding: .1em 0 6em;
+        font-weight: 700;
         opacity: 1;
     }
 }
@@ -36,7 +37,7 @@
     transition: left .7s ease-in-out;
     align-items: flex-start;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 3;
 
     &:hover, &:focus-within {
         @media screen and (max-width: 427px) {
@@ -123,6 +124,11 @@
             }
         }
     }
+}
+
+.cclogo {
+    position: relative;
+    left: -23.7vw;
 }
 
 @keyframes code-animation {
