@@ -182,6 +182,20 @@
         @media screen and (min-width: 900px) {
             width: 30vw;
         }
+        
+        &-item {
+            & > input {
+                display: block;
+                background: $dark-color;
+                margin: 0;
+                padding: 0 .5rem;
+                color: $light-color;
+            }
+        }
+        &-label {
+            display: block;
+            text-align: left;
+        }
     }
 
     &-message {

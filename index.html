@@ -268,7 +268,18 @@
                         <p class="contact-text">or you can use this contact form:</p>
                     </div>
                     <form class="contact-form contact">
-                        <textarea class="contact-message"></textarea><br>
+                        <div class="contact-form-item">
+                            <label for="contact-name" class="contact-form-label">Your name:</label>
+                            <input type="text" name="contact-name" id="contact-name">
+                        </div>
+                        <div class="contact-form-item">
+                            <label for="contact-email" class="contact-form-label">Your email:</label>
+                            <input type="email" name="contact-email" id="contact-email">
+                        </div>
+                        <div class="contact-form-item">
+                            <label for="contact-message" class="contact-form-label">Your Message:</label>
+                            <textarea class="contact-message" name="contact-message" id="contact-message"></textarea>
+                        </div>
                         <input type="submit" class="btn" value="Send">
                     </form>
                     <div class="article-content contact">

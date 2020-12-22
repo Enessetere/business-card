@@ -331,6 +331,17 @@
     width: 30vw;
   }
 }
+.contact-form-item > input {
+  display: block;
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  padding: 0 0.5rem;
+  color: #dddad9;
+}
+.contact-form-label {
+  display: block;
+  text-align: left;
+}
 .contact-message {
   margin: auto;
   font-size: 1.5rem;
